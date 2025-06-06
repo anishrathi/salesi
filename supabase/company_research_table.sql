@@ -1,0 +1,20 @@
+create table public.company_research (
+  id uuid not null default gen_random_uuid (),
+  input_company_name text null,
+  input_website text null,
+  company_summary text null,
+  linkedin_url text null,
+  twitter_url text null,
+  latest_news text null,
+  ceo_name text null,
+  ceo_linkedin text null,
+  cfo_name text null,
+  cfo_linkedin text null,
+  email_draft text null,
+  created_at timestamp with time zone null default now(),
+  ceo_bio text null,
+  cfo_bio text null,
+  linkedin_summary text null,
+  twitter_summary text null,
+  constraint company_research_pkey primary key (id)
+) TABLESPACE pg_default;
